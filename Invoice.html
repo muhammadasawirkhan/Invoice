@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Invoice</title>
+	<style>
+		.row{
+			display:flex;
+			border bottom: 1px solid black;
+		}
+		span{
+			display: flex;
+		}
+		.row p{
+			display: flex;
+			border:1px solid black;
+			margin:0px;
+			padding:0px;
+			max-width:135px;
+			min-width:135px;
+		}
+		.rightcolumn{
+			margin-left: 57.5%;
+		}
+		.row:after{
+			content: "";
+			display: table;
+			clear:both;
+		}
+		table{
+			width: 100%;
+		}
+		table tr,th,td{
+			border: 1px solid black;
+		}
+		th,td{
+			width:20%;
+		}
+	
+	</style>
+</head>
+<body>
+	<script>
+	class order
+	{
+	item='';
+	description='';
+	price='';
+	quantity='';
+	total='';
+	constructor(Item,Desc,Price,Qty)
+	{
+		this.item=Item;
+		this.description=Desc;
+		this.price=Price;
+		this.quantity=Qty;
+		this.total=this.quantity*this.price;
+	}
+
+	}	
+
+	</script>
+
+<div class="row">
+	<div class="leftcolumn">
+		Street 201,<br/>
+		Rawalpindi,Punjab,Pakistan.<br/>
+		Phone:+92-342234422
+	</div>
+	<div class="rightcolumn">
+		<span>
+			<p style="border:1px solid black;min-width: 248px;max-width: 248px;font-weight: bold;">INVOICE</p>
+		</span>
+		<span>
+			<p style="font-weight: bold;min-width:248px; max-width: 248px;">Date:29-june-2021</p>
+		</span>
+		<span>
+			<p style="font-weight: bold;min-width:248px; max-width: 248px;">Inv#:inv700</p>
+		</span>
+		<span>
+			<p style="font-weight: bold;min-width:248px; max-width: 248px;">Customer Number:600</p>
+		</span>
+	</div>
+</div>
+<div class="center">
+	<span>
+		Bill to:<br/>
+		St.100,House 2000-A,<br/>
+		Islamabad Pakistan.
+	</span>
+</div>
+<div>
+	<table id="tb1">
+		<tr>
+			<th>Item</th>
+			<th>Descrip</th>
+			<th>Price</th>
+			<th>Qty</th>
+			<th>Amount</th>
+		</tr>
+		<tr>
+				<th>Keyboard</th>
+				<th>Microsoft Keyboard</th>
+				<th>500</th>
+				<th>3</th>
+				<th>$1500</th>
+			</tr>
+
+			<tr>
+				<th>Mouse</th>
+				<th>Hitachi mouse 3 wheel</th>
+				<th>1000</th>
+				<th>5</th>
+				<th>$1000</th>
+			</tr>
+
+			<tr>
+				<th>Monitor</th>
+				<th>Samsung LCD</th>
+				<th>5000</th>
+				<th>2</th>
+				<th>$5000</th>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>Total:</td>
+				<td>$75000</td>
+			</tr>
+		<tr>
+			<script type="text/javascript">
+				Keyboard=new Order('Keyboard',			'Microsoft Keyboard',500,8);
+				document.write(`<td>${Keyboard.item}</td>`);
+				document.write(`<td>${Keyboard.description}</td>`);
+				document.write(`<td>${Keyboard.price}</td>`);
+				document.write(`<td>${Keyboard.quantity}</td>`);
+				document.write(`<td>${Keyboard.total}</td>`);
+
+			</script>
+		</tr>
+		<tr>
+			<script type="text/javascript">
+				Mouse=new Order('Mouse',			'Hitachi Mouse Wheel 3',3000,6);
+				document.write(`<td>${Mouse.item}</td>`);
+				document.write(`<td>${Mouse.description}</td>`);
+				document.write(`<td>${Mouse.price}</td>`);
+				document.write(`<td>${Mouse.quantity}</td>`);
+				document.write(`<td>${Mouse.total}</td>`);
+				
+			</script>
+		</tr>
+		<tr>
+			<script type="text/javascript">
+				Monitor=new Order('Monitor',			'Samsung LCD',6000,87);
+				document.write(`<td>${Monitor.item}</td>`);
+				document.write(`<td>${Monitor.description}</td>`);
+				document.write(`<td>${Monitor.price}</td>`);
+				document.write(`<td>${Monitor.quantity}</td>`);
+				document.write(`<td>${Monitor.total}</td>`);
+				
+			</script>
+		</tr>
+		<tr>
+			<script type="text/javascript">
+				tot=new Order(Total:'keyboard.total+Mouse.total+Monitor.total');
+				document.write(`<td>${Total.Total:}</td>`)
+				document.write(`<td>${keyboard.total+Mouse.total+Monitor.total}</td>`)
+			</script>
+		</tr>
+	</table>
+</div>
+
+
+</div>
+	
+</div>
+</body>
+</html>
